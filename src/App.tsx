@@ -7,8 +7,8 @@ function App() {
   const [number, setNumber] = useState<string>('');
   return (
     <div className="App">
-        <h3>Enter the Number</h3>
-        <br />
+      <h3>Enter the Number</h3>
+      <br />
       <div className="container">
         <Input
           className="zipCode"
@@ -26,23 +26,32 @@ function App() {
       <img
         alt="WhatsApp Main Page"
         src="https://static.whatsapp.net/rsrc.php/ym/r/36B424nhiL4.svg"
-        onClick={()=> {
-          if (zipCode === "") {
+        onClick={() => {
+          if (zipCode === '') {
             notification.error({
-              message: "Insert the zipCode"
-            })
-            return
+              message: 'Insert the zipCode',
+            });
+            return;
           }
-          if (number === "") {
+          if (number === '') {
             notification.error({
-              message: "Insert the phone number"
-            })
-            return
+              message: 'Insert the phone number',
+            });
+            return;
           }
-          window.open(`https://wa.me/${zipCode}${number}`)
+          window.open(`https://wa.me/${zipCode}${number}`);
         }}
-      >
-      </img>
+      ></img>
+      <br />
+      <br />
+      <hr />
+      Donaciones:
+      <br />
+      <div>
+        Mi cuenta BBVA:
+        <div>CUENTA SUELDO Número de cuenta: 0011-0057-0209589444</div>
+        <div>CCI: 011-057-000209589444-76</div>
+      </div>
     </div>
   );
 }
